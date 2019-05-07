@@ -1,0 +1,2 @@
+export const EMPLOYEE_LOGIN = 'EMPLOYEE_LOGIN';
+export const FETCH_BULLETIN = 'FETCH_BULLETIN';

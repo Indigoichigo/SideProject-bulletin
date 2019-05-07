@@ -1,0 +1,84 @@
+.login_section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.login_content {
+  width: 290px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px $c_main3;
+  box-sizing: border-box;
+  padding: 30px;
+
+  .l_text {
+    font-size: $t_size3;
+    color: $c_main1;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding-left: 10px;
+    border-left: 6px solid $c_main1;
+
+    letter-spacing: 2px;
+  }
+}
+
+.l_card_email_wrapper,
+.l_password_wrapper {
+  position: relative;
+  margin-top: 30px;
+
+  .l_label {
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    font-size: 14px;
+    color: $c_main1;
+    transition: 0.6s;
+  }
+
+  .l_input {
+    width: 100%;
+    font-size: $t_size6;
+    position: relative;
+    z-index: 5;
+  }
+
+  .whenHasText_l_label {
+    font-size: 12px;
+    top: -15px;
+  }
+}
+
+.l_error_btn_wrapper {
+  margin-top: 40px;
+  font-size: 0;
+  > div {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 50%;
+  }
+
+  .l_error_msg_wrapper {
+    text-align: left;
+    .l_error_msg {
+      color: #f00;
+      font-size: $t_size7_tiny;
+    }
+  }
+
+  .l_login_btn_wrapper {
+    text-align: right;
+    .l_login_btn {
+      font-size: $t_size7;
+    }
+  }
+}
+
+* {
+  // outline: 1px solid #f00;
+}

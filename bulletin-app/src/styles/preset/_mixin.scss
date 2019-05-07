@@ -1,0 +1,41 @@
+// rwd
+$rwd_break_point: (
+  // each padding 15px
+    mobile 576px 546px,
+  // each padding 30px
+    tablet_portrait 768px 708px,
+  // each padding 60px
+    tablet_landscape 992px 872px,
+  // each padding 90px
+    pc_normal 1200px 1020px,
+  // each padding 120px
+    pc_large 1440px 90%
+);
+
+@mixin set_content_size($content_size_value) {
+  .g_content_size {
+    width: $content_size_value;
+    margin: 0 auto;
+  }
+}
+
+@mixin rwd($break_point_key) {
+  @each $break_point, $break_point_value,
+    $content_size_value in $rwd_break_point
+  {
+    @if $break_point == $break_point_key {
+      @media screen and (min-width: $break_point_value) {
+        @include set_content_size($content_size_value);
+        @content;
+      }
+    }
+  }
+}
+
+@mixin execute_default_css($rwd_break_point) {
+  @each $break_point, $break_point_value,
+    $content_size_value in $rwd_break_point
+  {
+    @include rwd($break_point);
+  }
+}

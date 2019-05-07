@@ -1,0 +1,37 @@
+* {
+  font-family: 'PingFang TC', 'Microsoft JhengHei;', Arial, Helvetica,
+    sans-serif;
+}
+
+$t_size1: 60px;
+$t_size2: 32px;
+$t_size3: 28px;
+$t_size4: 24px;
+$t_size5: 20px;
+$t_size6: 16px;
+$t_size7: 14px;
+$t_size7_tiny: 12px;
+
+h1 {
+  font-size: $t_size1;
+}
+
+h2 {
+  font-size: $t_size2;
+}
+
+h3 {
+  font-size: $t_size3;
+}
+
+h4 {
+  font-size: $t_size4;
+}
+
+h5 {
+  font-size: $t_size5;
+}
+
+h6 {
+  font-size: $t_size6;
+}

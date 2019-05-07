@@ -1,0 +1,439 @@
+* {
+  font-family: 'PingFang TC', 'Microsoft JhengHei;', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+button {
+  border: 0px transparent;
+  outline: 0px transparent;
+  cursor: pointer;
+}
+
+input {
+  border: 1px #95a5a6 solid;
+  outline: 0px transparent;
+  width: 120px;
+  height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+textarea {
+  outline: 0px transparent;
+  resize: none;
+  font-size: 16px;
+}
+
+.login_section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.login_content {
+  width: 290px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 10px #faf0e6;
+          box-shadow: 5px 5px 10px #faf0e6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px;
+}
+
+.login_content .l_text {
+  font-size: 28px;
+  color: #ff8c00;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 10px 0;
+  padding-left: 10px;
+  border-left: 6px solid #ff8c00;
+  letter-spacing: 2px;
+}
+
+.l_card_email_wrapper,
+.l_password_wrapper {
+  position: relative;
+  margin-top: 30px;
+}
+
+.l_card_email_wrapper .l_label,
+.l_password_wrapper .l_label {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  font-size: 14px;
+  color: #ff8c00;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.l_card_email_wrapper .l_input,
+.l_password_wrapper .l_input {
+  width: 100%;
+  font-size: 16px;
+  position: relative;
+  z-index: 5;
+}
+
+.l_card_email_wrapper .whenHasText_l_label,
+.l_password_wrapper .whenHasText_l_label {
+  font-size: 12px;
+  top: -15px;
+}
+
+.l_error_btn_wrapper {
+  margin-top: 40px;
+  font-size: 0;
+}
+
+.l_error_btn_wrapper > div {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 50%;
+}
+
+.l_error_btn_wrapper .l_error_msg_wrapper {
+  text-align: left;
+}
+
+.l_error_btn_wrapper .l_error_msg_wrapper .l_error_msg {
+  color: #f00;
+  font-size: 12px;
+}
+
+.l_error_btn_wrapper .l_login_btn_wrapper {
+  text-align: right;
+}
+
+.l_error_btn_wrapper .l_login_btn_wrapper .l_login_btn {
+  font-size: 14px;
+}
+
+.surfing_section {
+  margin-top: 80px;
+}
+
+.surfing_content {
+  margin: 0 auto;
+  max-width: 670px;
+}
+
+.article_box {
+  -webkit-box-shadow: 5px 5px 10px #faf0e6;
+          box-shadow: 5px 5px 10px #faf0e6;
+  border-radius: 10px;
+}
+
+.article_box + .article_box {
+  margin-top: 50px;
+}
+
+.article_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.article_header .article_title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 24px;
+}
+
+.article_header .article_author_time_wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 10px 0;
+  padding: 0 10px;
+  color: #95a5a6;
+  font-size: 14px;
+}
+
+.article_header .article_author_time_wrapper span {
+  display: inline-block;
+}
+
+.article_header .article_author_time_wrapper span:last-child {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.article_img {
+  max-width: 100%;
+}
+
+.article_content_wrapper {
+  padding-top: 10px;
+}
+
+.article_info_wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.article_info_sub_wrapper {
+  display: inline-block;
+}
+
+.article_info_sub_wrapper + .article_info_sub_wrapper {
+  margin-left: 10px;
+}
+
+.article_info_sub_wrapper .article_icon {
+  padding: 0 5px;
+}
+
+.article_info_sub_wrapper .article_icon > .fa-heart {
+  color: #a20025;
+}
+
+.article_info_sub_wrapper .article_icon > .fa-comment-dots {
+  color: #60a917;
+}
+
+@media screen and (min-width: 576px) {
+  .g_content_size {
+    width: 546px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .g_content_size {
+    width: 708px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .g_content_size {
+    width: 872px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .g_content_size {
+    width: 1020px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .g_content_size {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.input_style {
+  border: 0px transparent;
+  border-bottom: 1px solid #ffa500;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 0;
+  background-color: transparent;
+}
+
+.button_style {
+  border: 0px transparent;
+  background-color: #ffa500;
+  width: 80px;
+  height: 35px;
+  border-radius: 3px;
+  color: #ffffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button_style:hover {
+  background-color: #ff8c00;
+}
+/*# sourceMappingURL=index.css.map */
