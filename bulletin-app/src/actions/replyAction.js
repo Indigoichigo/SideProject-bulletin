@@ -14,8 +14,6 @@ export const replyArticle = (reqData, headerInfo) => async dispatch => {
 export const fetchReplyArticle = id => async dispatch => {
   const res = await rootApi.get(`/bulletin/reply/${id}`);
 
-  console.log(res);
-
   const replyObj = {
     id: res.data.data.article_id,
     reply: res.data.data.reply,

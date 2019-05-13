@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReplyArticle from '../replyArticle/ReplyArticle';
 import { fetchReplyArticle } from '../../actions/replyAction';
 import { connect } from 'react-redux';
@@ -7,12 +7,36 @@ import rootApi from '../../api/rootApi';
 
 const Article = props => {
   const showReply = useTrueFalse(true);
+  const [computeLike, setComputeLike] = useState(0);
+
+  // is just a state to watch heart may increase or decrease,
+  // the true may be increase or decrease, it's depend on props.like_count
+  const isHeartCountAdd = useTrueFalse(props.is_like);
+
+  useEffect(() => {
+    setComputeLike(props.like_count);
+  }, [props.like_count]);
 
   function handleShowReply() {
     showReply.onChange(!showReply.value);
   }
 
   async function handleLike() {
+    if (props.like_count === true) {
+      if (isHeartCountAdd.value === true) {
+        setComputeLike(computeLike + 1);
+      } else {
+        setComputeLike(computeLike - 1);
+      }
+    } else {
+      if (isHeartCountAdd.value === true) {
+        setComputeLike(computeLike - 1);
+      } else {
+        setComputeLike(computeLike + 1);
+      }
+    }
+    isHeartCountAdd.onChange(!isHeartCountAdd.value);
+
     const articleId = {
       article_id: props.article_id,
       card_no: sessionStorage.getItem('card_no'),
@@ -24,7 +48,6 @@ const Article = props => {
       },
     };
     const res = await rootApi.post('bulletin/like', articleId, config);
-    console.log(res);
   }
 
   return (
@@ -48,9 +71,13 @@ const Article = props => {
         <div className="article_info_wrapper">
           <p className="article_info_sub_wrapper" onClick={handleLike}>
             <span className="article_icon">
-              <i className="far fa-heart" />
+              {isHeartCountAdd.value ? (
+                <i className="fas fa-heart" />
+              ) : (
+                <i className="far fa-heart" />
+              )}
             </span>
-            <span className="article_icon_info">{props.like_count}</span>
+            <span className="article_icon_info">{computeLike}</span>
           </p>
           <p className="article_info_sub_wrapper" onClick={handleShowReply}>
             <span className="article_icon">

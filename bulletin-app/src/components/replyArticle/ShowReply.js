@@ -8,14 +8,14 @@ const ShowReply = props => {
   }, [props.replyData.length]);
 
   function renderReply() {
-    if (props.replyData.length === 0) {
+    if (Object.values(props.replyData).length === 0) {
       return null;
     }
-    console.log(props.replyData);
-    const data = props.replyData.reply;
+
+    const data = props.replyData[props.article_id];
 
     data.forEach(item => {
-      const date = new Date(item.timpstamp * 1000);
+      const date = new Date(item.timestamp * 1000);
       const fullTime = {
         year: date.getFullYear(),
         month: date.getMonth() + 1,
@@ -29,9 +29,7 @@ const ShowReply = props => {
       } ${fullTime.hour}:${fullTime.minute}`;
     });
 
-    console.log('after', data);
-
-    return props.replyData.reply.map((item, index) => {
+    return data.map((item, index) => {
       return (
         <div className="show_reply" key={index}>
           <p className="name_time_wrapper">
@@ -50,7 +48,6 @@ const ShowReply = props => {
 };
 
 function mapStateToProps(state) {
-  console.log(state.replyData.length);
   return {
     replyData: state.replyData,
   };

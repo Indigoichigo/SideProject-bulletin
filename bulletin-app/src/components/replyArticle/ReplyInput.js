@@ -2,6 +2,7 @@ import React from 'react';
 import useInput from '../../useHook/useInput';
 import { connect } from 'react-redux';
 import { replyArticle } from '../../actions/replyAction';
+import { fetchReplyArticle } from '../../actions/replyAction';
 
 const ReplyInput = props => {
   const replyText = useInput('');
@@ -18,7 +19,10 @@ const ReplyInput = props => {
       },
     };
 
-    props.replyArticle(reqData, config);
+    replyText.handleValueChange('');
+    props.replyArticle(reqData, config).then(() => {
+      props.fetchReplyArticle(props.article_id);
+    });
   }
   return (
     <div className="reply_article_input">
@@ -41,13 +45,7 @@ const ReplyInput = props => {
   );
 };
 
-// function mapStateToProps(state) {
-//   return {
-//     replyData: state.replyData,
-//   };
-// }
-
 export default connect(
   null,
-  { replyArticle },
+  { replyArticle, fetchReplyArticle },
 )(ReplyInput);

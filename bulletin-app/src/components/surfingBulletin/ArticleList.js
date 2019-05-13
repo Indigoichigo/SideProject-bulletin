@@ -33,7 +33,6 @@ const ArticleList = props => {
 };
 
 function mapStateToProps(state) {
-  console.log(state);
   return {
     bulletinData: state.bulletinData,
   };

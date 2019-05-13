@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { employeeLogin } from '../../actions/loginAction';
 
 const Login = props => {
-  console.log(props);
   const userId = useInput('0460335377');
   const userPw = useInput('');
 

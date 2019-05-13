@@ -357,12 +357,15 @@ textarea {
       -ms-flex: 1;
           flex: 1;
   font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 1px;
 }
 
 .article_header .article_author_time_wrapper {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 150px;
   text-align: right;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -388,6 +391,8 @@ textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px;
+  line-height: 24px;
+  letter-spacing: 1px;
 }
 
 .article_info_wrapper {
@@ -409,11 +414,11 @@ textarea {
 }
 
 .article_info_sub_wrapper .article_icon > .fa-heart {
-  color: #a20025;
+  color: #e51400;
 }
 
 .article_info_sub_wrapper .article_icon > .fa-comment-dots {
-  color: #60a917;
+  color: #f0a30a;
 }
 
 .public_article_section {
