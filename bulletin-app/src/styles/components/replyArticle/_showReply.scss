@@ -1,0 +1,33 @@
+.show_reply {
+  box-shadow: 3px 3px 6px #eee;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 5px;
+
+  & + & {
+    margin-top: 10px;
+  }
+}
+
+.name_time_wrapper {
+  color: $c_assist1;
+  font-size: $t_size7;
+  > span {
+    float: left;
+    width: 50%;
+  }
+
+  > .reply_time {
+    text-align: right;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.reply_content {
+  margin-top: 10px;
+}

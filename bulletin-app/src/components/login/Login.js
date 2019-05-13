@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { employeeLogin } from '../../actions/loginAction';
 
 const Login = props => {
-  const userId = useInput('');
+  console.log(props);
+  const userId = useInput('0460335377');
   const userPw = useInput('');
 
   function handleIdInputAnimate() {
@@ -30,7 +31,7 @@ const Login = props => {
       password: userPw.value,
     };
 
-    props.employeeLogin(resData);
+    props.employeeLogin(resData, props.history);
 
     userId.handleValueChange('');
     userPw.handleValueChange('');
@@ -82,7 +83,7 @@ const Login = props => {
           />
         </div>
 
-        <div className="l_error_btn_wrapper clearfix">
+        <div className="l_error_btn_wrapper">
           <div className="l_error_msg_wrapper">
             <p className="l_error_msg">{handleLoginDeny()}</p>
           </div>

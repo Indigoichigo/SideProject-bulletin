@@ -1,0 +1,38 @@
+.bulletin_header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: $c_white;
+}
+
+.bulletin_header_content {
+  font-size: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow: 0px 5px 10px $c_main3;
+
+  > div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+  }
+}
+
+.bh_left_wrapper {
+  .bh_left_text {
+    font-size: $t_size3;
+    letter-spacing: 2px;
+    color: $c_main1;
+    cursor: pointer;
+  }
+}
+
+.bh_right_wrapper {
+  text-align: right;
+  .bh_right_text {
+    font-size: $t_size6;
+    color: $c_main2;
+  }
+}

@@ -5,7 +5,8 @@ import { fetchBulletin } from '../../actions/bulletinAction';
 
 const ArticleList = props => {
   useEffect(() => {
-    props.fetchBulletin();
+    const cardNo = sessionStorage.getItem('card_no');
+    props.fetchBulletin(cardNo);
   }, [props.bulletinData.length]);
 
   function renderArticle(props) {

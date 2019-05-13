@@ -4,12 +4,21 @@
 @import './preset/reset';
 @import './preset/mixin';
 
-@import './components/login/login';
-@import './components/replyBulletin/replyBulletin';
+// global
+@import './components/globalComponent/bulletinHeader';
 
-// surfing
+// login
+@import './components/login/login';
+
+// surfing bulletin
 @import './components/surfingBulletin/surfingBulletin';
 @import './components/surfingBulletin/article';
+@import './components/surfingBulletin/publicArticle';
+
+// reply
+@import './components/replyArticle/replyArticle';
+@import './components/replyArticle/replyInput';
+@import './components/replyArticle/showReply';
 
 @include rwd(mobile) {
 }
@@ -43,6 +52,9 @@
 }
 
 .button_style {
+  display: inline-block;
+  text-align: center;
+  line-height: 35px;
   border: 0px transparent;
   background-color: $c_main2;
   width: 80px;
