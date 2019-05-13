@@ -8,7 +8,13 @@ const ShowReply = props => {
   }, [props.replyData.length]);
 
   function renderReply() {
+    // 初始state為空資料還沒抓回來
     if (Object.values(props.replyData).length === 0) {
+      return null;
+    }
+
+    // 資料還沒抓回來
+    if (!props.replyData.hasOwnProperty(props.article_id)) {
       return null;
     }
 

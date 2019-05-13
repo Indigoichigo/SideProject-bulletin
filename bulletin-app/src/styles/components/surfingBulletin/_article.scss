@@ -26,14 +26,8 @@
     color: $c_assist1;
     font-size: $t_size7;
 
-    span {
-      display: inline-block;
+    p {
       line-height: 24px;
-
-      &:last-child {
-        display: inline-block;
-        margin-left: 10px;
-      }
     }
   }
 }

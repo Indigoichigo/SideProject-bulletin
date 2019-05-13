@@ -9,7 +9,7 @@ const SurfingBulletin = () => {
   return (
     <div className="surfing_section">
       <div className="surfing_content">
-        <PublicArticle />
+        {sessionStorage.getItem('isLogin') === '1' && <PublicArticle />}
         <ArticleList />
       </div>
     </div>

@@ -10,6 +10,7 @@ export const employeeLogin = (loginData, history) => async dispatch => {
     if (res.data.code === 200) {
       sessionStorage.setItem('bulletin_token', res.data.token);
       sessionStorage.setItem('card_no', res.data.data.cardNo);
+      sessionStorage.setItem('isLogin', '1');
     }
 
     dispatch({
@@ -17,15 +18,8 @@ export const employeeLogin = (loginData, history) => async dispatch => {
       payload: res,
     });
 
-    // const cardNo = sessionStorage.getItem('card_no');
-
-    // history.push(`/bulletin?cardNo=${cardNo}`);
     history.push('/');
   } catch (e) {
     console.log(e);
-    // dispatch({
-    //   type: EMPLOYEE_LOGIN,
-    //   payload: e.response,
-    // });
   }
 };

@@ -54,14 +54,14 @@ const Article = props => {
     <div className="article_box">
       <div className="article_header">
         <h4 className="article_title">{props.title}</h4>
-        <p className="article_author_time_wrapper">
-          <span className="article_author">{props.name}</span>
-          <span className="article_time">{`${props.accurateTime.year}/${
+        <div className="article_author_time_wrapper">
+          <p className="article_author">{props.name}</p>
+          <p className="article_time">{`${props.accurateTime.year}/${
             props.accurateTime.month
           }/${props.accurateTime.date} ${props.accurateTime.hour}:${
             props.accurateTime.minute
-          }`}</span>
-        </p>
+          }`}</p>
+        </div>
       </div>
       <div className="article_img_wrapper">
         <img className="article_img" src={`${props.full_img_path}`} />
@@ -86,7 +86,11 @@ const Article = props => {
             <span className="article_icon_info">{props.reply_count}</span>
           </p>
 
-          <ReplyArticle {...props} showReply={showReply.value} />
+          <ReplyArticle
+            {...props}
+            showReply={showReply.value}
+            handleShowReply={handleShowReply}
+          />
         </div>
       </div>
     </div>

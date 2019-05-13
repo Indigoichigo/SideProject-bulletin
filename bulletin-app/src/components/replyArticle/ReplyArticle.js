@@ -7,7 +7,7 @@ import ShowReply from './ShowReply';
 const ReplyArticle = props => {
   return (
     <div>
-      <ReplyInput {...props} />
+      <ReplyInput {...props} handleShowReply={props.handleShowReply} />
       {!props.showReply && <ShowReply {...props} />}
     </div>
   );
