@@ -5,10 +5,9 @@ import { fetchBulletin } from './bulletinAction';
 
 // CATEGORYLIST_FETCH,
 export const publicArticle = (reqData, headerInfo) => async dispatch => {
-  console.log(reqData, headerInfo);
   const res = await rootApi.post('/bulletin', reqData, headerInfo);
 
-  fetchBulletin()
+  fetchBulletin();
 
   dispatch({
     type: PUBLIC_ARTICLE,

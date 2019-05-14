@@ -28,6 +28,11 @@ const PublicArticle = props => {
     };
 
     props.publicArticle(formData, config).then(() => {
+      authorName.handleValueChange('');
+      articleTitle.handleValueChange('');
+      articleContent.handleValueChange('');
+      document.querySelector('.pa_upload_input').value = '';
+
       props.fetchBulletin();
     });
   }

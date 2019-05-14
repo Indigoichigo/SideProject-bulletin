@@ -67,7 +67,7 @@ const Article = props => {
         <img className="article_img" src={`${props.full_img_path}`} />
       </div>
       <div className="article_content_wrapper">
-        <div className="article_contnet">{props.content}</div>
+        <div className="article_content">{props.content}</div>
         <div className="article_info_wrapper">
           <p className="article_info_sub_wrapper" onClick={handleLike}>
             <span className="article_icon">

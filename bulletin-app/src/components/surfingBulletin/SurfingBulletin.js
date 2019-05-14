@@ -3,7 +3,7 @@ import PublicArticle from './PublicArticle';
 import ArticleList from './ArticleList';
 import useTrueFalse from '../../useHook/useTrueFalse';
 
-const SurfingBulletin = () => {
+const SurfingBulletin = props => {
   const reloadArticleListAPIState = useTrueFalse(true);
 
   return (

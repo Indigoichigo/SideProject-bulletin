@@ -11,13 +11,12 @@ import '../styles/index.css';
 const App = () => {
   return (
     <BrowserRouter>
-      <BulletinHeader />
+      <Route path="/" component={BulletinHeader} />
       <Switch>
         <Route path="/" component={SurfingBulletin} exact />
-        {/* <Route path="/bulletin" component={SurfingBulletin} /> */}
         <Route path="/login" component={Login} exact />
-        {/* <Route path="/replyBulletin" component={ReplyArticle} /> */}
-        <Route component={NotFoundPage} />
+
+        {/* <Route component={NotFoundPage} /> */}
       </Switch>
     </BrowserRouter>
   );

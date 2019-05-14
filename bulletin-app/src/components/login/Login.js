@@ -37,7 +37,6 @@ const Login = props => {
   }
 
   function handleLoginDeny() {
-    console.log(props.login.status);
     const isLoginDeny = [401, 403, 404].some(
       item => props.login.status === item,
     );
